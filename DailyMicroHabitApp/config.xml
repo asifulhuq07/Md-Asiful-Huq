@@ -1,0 +1,61 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="com.dailymicrohabit.app" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <name>Daily Micro Habit</name>
+    <description>A fully offline app that helps you build better habits through small, manageable daily actions.</description>
+    <author email="developer@dailymicrohabit.com" href="https://dailymicrohabit.com">
+        Daily Micro Habit Team
+    </author>
+    <content src="index.html" />
+    
+    <!-- Global preferences -->
+    <preference name="DisallowOverscroll" value="true" />
+    <preference name="Fullscreen" value="true" />
+    <preference name="Orientation" value="portrait" />
+    <preference name="BackgroundColor" value="0xFFFFFFFF" />
+    <preference name="HideKeyboardFormAccessoryBar" value="true" />
+    <preference name="KeyboardDisplayRequiresUserAction" value="false" />
+    
+    <!-- Android-specific preferences -->
+    <platform name="android">
+        <preference name="Fullscreen" value="true" />
+        <preference name="StatusBarOverlaysWebView" value="false" />
+        <preference name="StatusBarBackgroundColor" value="#000000" />
+        <preference name="android-minSdkVersion" value="22" />
+        <preference name="android-targetSdkVersion" value="33" />
+        <preference name="SplashScreen" value="none" />
+        <preference name="SplashScreenDelay" value="0" />
+        <preference name="AutoHideSplashScreen" value="true" />
+        <preference name="ShowSplashScreenSpinner" value="false" />
+        <preference name="AndroidInsecureFileModeEnabled" value="true" />
+        <preference name="AndroidLaunchMode" value="singleTop" />
+        <preference name="KeepRunning" value="true" />
+        <preference name="LoadingDialog" value="" />
+        <preference name="LoadingPageDialog" value="" />
+        <preference name="ErrorUrl" value="" />
+        <preference name="BackgroundColor" value="0xFFFFFFFF" />
+        <preference name="DisallowOverscroll" value="true" />
+        
+        <!-- Allow access to local files -->
+        <allow-intent href="file://*/*" />
+        <allow-navigation href="file://*/*" />
+        
+        <!-- Disable hardware back button default behavior -->
+        <preference name="HardwareBackButton" value="false" />
+    </platform>
+    
+    <!-- Allow access to local content -->
+    <access origin="*" />
+    <allow-intent href="http://*/*" />
+    <allow-intent href="https://*/*" />
+    <allow-intent href="tel:*" />
+    <allow-intent href="sms:*" />
+    <allow-intent href="mailto:*" />
+    <allow-intent href="geo:*" />
+    
+    <!-- Allow navigation to local files -->
+    <allow-navigation href="data:*" />
+    <allow-navigation href="file://*/*" />
+    
+    <!-- Content Security Policy -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: file: blob: 'unsafe-inline' 'unsafe-eval'; media-src *;" />
+</widget>
